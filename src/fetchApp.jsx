@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios';
 
+
 export default function FetchApp() {
   const [currentPrice, setCurrentPrice] = useState(0);
   const [previousPrice,setPreviousPrice] = useState(0);
@@ -23,7 +24,7 @@ export default function FetchApp() {
   }
 
   return (
-    <div>
+    <div style={{background:'lightgray',width:'300px',margin:'auto',padding:'30px',marginTop:'30px',borderRadius:'20px',paddingBottom:'60px'}}>
       <h1>FetchApp</h1>
             <h3>Bitcoin Price : {currentPrice}</h3>
 
@@ -31,7 +32,7 @@ export default function FetchApp() {
             <>
             <h4>Previous Price : {previousPrice}</h4>
             </>:<></>}
-        <button onClick={handleButtonClick}  style={{backgroundColor:`${currentPrice?'purple':'blue'}`,color:'white',padding:'10px',fontSize:'15px'}}> {currentPrice?"Refresh Bitcoin Price":"Get Bitcoin Price"}</button>
+        <button onClick={handleButtonClick}  style={{backgroundColor:`${currentPrice?'purple':'blue'}`,color:'white',padding:'10px',fontSize:'15px',borderRadius:'10px'}}> {currentPrice?"Refresh Bitcoin Price":"Get Bitcoin Price"}</button>
     </div>
   );
 }
