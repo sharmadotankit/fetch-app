@@ -1,6 +1,5 @@
-import logo from './logo.svg';
 import './App.css';
-import FetchApp from './fetchApp';
+import FetchApp from './FetchApp';
 
 function App() {
   return (
