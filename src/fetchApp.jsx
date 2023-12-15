@@ -5,8 +5,7 @@ import axios from 'axios';
 export default function FetchApp() {
   const [currentPrice, setCurrentPrice] = useState(0);
   const [previousPrice,setPreviousPrice] = useState(0);
-
-  console.log(currentPrice)
+  
   const handleButtonClick = async() =>{
     try{
         const response = await axios.get('https://random-data-api.com/api/address/random_address?size=3');
